@@ -2,7 +2,7 @@
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 
-const SECONDARY = "#C59B27";
+const SECONDARY = "#E0A526";
 
 const TICKET_ICON = (
   <><path d="M3 7a2 2 0 012-2h14a2 2 0 012 2v3a2 2 0 000 4v3a2 2 0 01-2 2H5a2 2 0 01-2-2v-3a2 2 0 000-4V7z" /><path d="M9.5 9.5h.01M14.5 14.5h.01M15 9l-6 6" /></>
@@ -52,7 +52,7 @@ export default function ScratchCardMenu({ compact = false }: { compact?: boolean
         onClick={() => setOpen((o) => !o)}
         aria-haspopup="menu"
         aria-expanded={open}
-        className="flex flex-col items-center gap-0.5 text-gray-600 hover:text-[#0B1B4F] transition-colors"
+        className="flex flex-col items-center gap-0.5 text-gray-600 hover:text-[#1B6B35] transition-colors"
         style={{ background: "none", border: "none", cursor: "pointer", padding: 0 }}
       >
         <svg width={compact ? 22 : 24} height={compact ? 22 : 24} fill="none" stroke="currentColor" strokeWidth={1.8} viewBox="0 0 24 24">

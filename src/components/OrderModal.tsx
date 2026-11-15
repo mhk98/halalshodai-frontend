@@ -65,7 +65,7 @@ export default function OrderModal({ product, onClose }: OrderModalProps) {
         <div
           className="flex items-center"
           style={{
-            background: "#0B1B4F", borderRadius: "8px 8px 0 0", borderBottom: "2px solid #C59B27",
+            background: "#1B6B35", borderRadius: "8px 8px 0 0", borderBottom: "2px solid #E0A526",
             height: 58, paddingLeft: 28, paddingRight: 28,
           }}
         >
@@ -145,7 +145,7 @@ export default function OrderModal({ product, onClose }: OrderModalProps) {
                     disabled={!canBuy}
                     className="flex-1 text-white font-bold tracking-wide transition-all hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50"
                     style={{
-                      background: added ? "#16a34a" : "#C59B27",
+                      background: added ? "#16a34a" : "#E0A526",
                       borderRadius: 4,
                       height: 42,
                       fontSize: 14,
@@ -160,7 +160,7 @@ export default function OrderModal({ product, onClose }: OrderModalProps) {
                     disabled={!canBuy}
                     className="flex-1 text-white font-bold tracking-wide transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50"
                     style={{
-                      background: "#0B1B4F",
+                      background: "#1B6B35",
                       borderRadius: 4,
                       height: 42,
                       fontSize: 14,

@@ -13,8 +13,8 @@ import AccountMenu from "@/components/AccountMenu";
 import ScratchCardMenu from "@/components/ScratchCardMenu";
 import { trackPixelEvent } from "@/lib/pixel";
 
-const PRIMARY   = "#0B1B4F";   // Royal Navy Blue (Holy Deen)
-const SECONDARY = "#C59B27";   // Royal Gold (Holy Deen)
+const PRIMARY   = "#1B6B35";   // Royal Navy Blue (Halal Shodai)
+const SECONDARY = "#E0A526";   // Royal Gold (Halal Shodai)
 
 interface HeaderProps {
   logoUrl?: string | null;
@@ -196,7 +196,7 @@ function HeaderInner({ logoUrl, navItems: navItemsProp }: HeaderProps) {
             <div style={{ display: "flex", alignItems: "center", gap: 14, flexShrink: 0 }}>
             <ScratchCardMenu compact />
 
-            <Link href="/track-order" className="flex flex-col items-center gap-0.5 text-gray-600 hover:text-[#0B1B4F] transition-colors">
+            <Link href="/track-order" className="flex flex-col items-center gap-0.5 text-gray-600 hover:text-[#1B6B35] transition-colors">
               <svg width={22} height={22} fill="none" stroke="currentColor" strokeWidth={1.8} viewBox="0 0 24 24">
                 <rect x="1" y="3" width="15" height="13" rx="1" /><path d="M16 8h4l3 3v5h-7V8z" /><circle cx="5.5" cy="18.5" r="2.5" /><circle cx="18.5" cy="18.5" r="2.5" />
               </svg>
@@ -209,7 +209,7 @@ function HeaderInner({ logoUrl, navItems: navItemsProp }: HeaderProps) {
             <div ref={cartRef} className="relative" style={{ flexShrink: 0 }}>
               <button
                 onClick={() => setCartOpen((o) => !o)}
-                className="flex flex-col items-center gap-0.5 text-gray-600 hover:text-[#0B1B4F] transition-colors"
+                className="flex flex-col items-center gap-0.5 text-gray-600 hover:text-[#1B6B35] transition-colors"
                 style={{ background: "none", border: "none", cursor: "pointer", padding: 0, position: "relative" }}
               >
                 <div className="relative">
@@ -393,7 +393,7 @@ function HeaderInner({ logoUrl, navItems: navItemsProp }: HeaderProps) {
               <ScratchCardMenu />
             </div>
 
-            <Link href="/track-order" className="hidden md:flex flex-col items-center gap-0.5 text-gray-600 hover:text-[#0B1B4F] transition-colors">
+            <Link href="/track-order" className="hidden md:flex flex-col items-center gap-0.5 text-gray-600 hover:text-[#1B6B35] transition-colors">
               <svg width={24} height={24} fill="none" stroke="currentColor" strokeWidth={1.8} viewBox="0 0 24 24">
                 <rect x="1" y="3" width="15" height="13" rx="1" /><path d="M16 8h4l3 3v5h-7V8z" /><circle cx="5.5" cy="18.5" r="2.5" /><circle cx="18.5" cy="18.5" r="2.5" />
               </svg>
@@ -404,7 +404,7 @@ function HeaderInner({ logoUrl, navItems: navItemsProp }: HeaderProps) {
 
             {/* Cart with hover dropdown */}
             <div ref={cartRef} className="relative" onMouseEnter={() => setCartOpen(true)} onMouseLeave={() => setCartOpen(false)}>
-              <button className="flex flex-col items-center gap-0.5 text-gray-600 hover:text-[#0B1B4F] transition-colors">
+              <button className="flex flex-col items-center gap-0.5 text-gray-600 hover:text-[#1B6B35] transition-colors">
                 <div className="relative">
                   <svg width={26} height={26} fill="none" stroke="currentColor" strokeWidth={1.8} viewBox="0 0 24 24">
                     <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18M16 10a4 4 0 01-8 0" />

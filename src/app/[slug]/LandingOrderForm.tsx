@@ -417,7 +417,7 @@ export default function LandingOrderForm({
     try {
       const order = await createOrder(buildPayload("pending", normalizedPhone));
       trackLandingEvent("Purchase", total, order.Id, pixelUser);
-      // invoiceId is the display number (HD-xxxx); orderId is the raw stored value.
+      // invoiceId is the display number (HS-xxxx); orderId is the raw stored value.
       const invoiceId = order.invoiceId || order.orderId || String(order.Id);
       // Same hand-off as the cart checkout, so /order-success and re-confirm work alike.
       window.localStorage.setItem(
@@ -452,13 +452,13 @@ export default function LandingOrderForm({
       className="bg-slate-100 px-4 py-20"
       onFocusCapture={trackBeginCheckoutOnce}
     >
-      <div className="mx-auto max-w-5xl rounded-md border-2 border-[#0B1B4F] bg-white p-6 shadow-sm md:p-8">
+      <div className="mx-auto max-w-5xl rounded-md border-2 border-[#1B6B35] bg-white p-6 shadow-sm md:p-8">
         <h2 className="text-center text-3xl font-black leading-tight text-slate-800 md:text-4xl">
           {orderTitle}
         </h2>
 
         <div className="mt-8">
-          <h3 className="mb-3 text-sm font-black text-[#0B1B4F]">
+          <h3 className="mb-3 text-sm font-black text-[#1B6B35]">
             {labels.productSelectTitle}
           </h3>
           <div className="grid gap-4 md:grid-cols-2">
@@ -478,14 +478,14 @@ export default function LandingOrderForm({
                   key={option.id}
                   className={`grid grid-cols-[22px_64px_1fr] gap-3 rounded-md border p-3 text-left transition ${
                     item
-                      ? "border-[#C59B27] bg-[#FAF4E6]/50"
-                      : "border-slate-200 bg-white hover:border-[#C59B27]/50"
+                      ? "border-[#E0A526] bg-[#FDF6E3]/50"
+                      : "border-slate-200 bg-white hover:border-[#E0A526]/50"
                   }`}
                 >
                   <span
                     className={`mt-5 h-4 w-4 rounded-full border ${
                       item
-                        ? "border-[#0B1B4F] bg-[#0B1B4F]"
+                        ? "border-[#1B6B35] bg-[#1B6B35]"
                         : "border-slate-300"
                     }`}
                   />
@@ -535,7 +535,7 @@ export default function LandingOrderForm({
                         {formatMoney(option.price)}৳
                       </span>
                       {option.freeShipping ? (
-                        <span className="rounded bg-[#FAF4E6] px-2 py-0.5 text-xs font-bold text-[#A87F18]">
+                        <span className="rounded bg-[#FDF6E3] px-2 py-0.5 text-xs font-bold text-[#C48D17]">
                           ফ্রি ডেলিভারি
                         </span>
                       ) : null}
@@ -600,7 +600,7 @@ export default function LandingOrderForm({
                   setCustomer((prev) => ({ ...prev, note: event.target.value }))
                 }
                 placeholder={labels.notePlaceholder}
-                className="mt-2 min-h-24 w-full rounded border border-slate-300 px-3 py-2 outline-none focus:border-[#0B1B4F]"
+                className="mt-2 min-h-24 w-full rounded border border-slate-300 px-3 py-2 outline-none focus:border-[#1B6B35]"
               />
             </label>
 
@@ -614,7 +614,7 @@ export default function LandingOrderForm({
                   <span
                     className={
                       shipping === "inside"
-                        ? "text-[#0B1B4F]"
+                        ? "text-[#1B6B35]"
                         : "text-slate-300"
                     }
                   >
@@ -635,7 +635,7 @@ export default function LandingOrderForm({
                   <span
                     className={
                       shipping === "outside"
-                        ? "text-[#0B1B4F]"
+                        ? "text-[#1B6B35]"
                         : "text-slate-300"
                     }
                   >
@@ -664,7 +664,7 @@ export default function LandingOrderForm({
               type="button"
               onClick={placeOrder}
               disabled={saving}
-              className="mt-6 w-full rounded bg-[#0B1B4F] hover:bg-[#071233] px-5 py-4 text-lg font-black text-white transition disabled:opacity-60 shadow-md"
+              className="mt-6 w-full rounded bg-[#1B6B35] hover:bg-[#14552A] px-5 py-4 text-lg font-black text-white transition disabled:opacity-60 shadow-md"
             >
               🔒 {saving ? "Place Order..." : ctaText}
             </button>
@@ -705,7 +705,7 @@ export default function LandingOrderForm({
               {addonSummary.map(([key, line]) => (
                 <div
                   key={key}
-                  className="grid grid-cols-[1fr_92px_88px] items-center gap-2 bg-[#FAF4E6] p-3"
+                  className="grid grid-cols-[1fr_92px_88px] items-center gap-2 bg-[#FDF6E3] p-3"
                 >
                   <p className="min-w-0 text-sm font-bold">
                     🎁 {line.name}{" "}

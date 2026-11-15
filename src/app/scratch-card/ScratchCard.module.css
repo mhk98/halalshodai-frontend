@@ -1,6 +1,6 @@
 /*
  * Scratch card pages (claim, another card, track).
- * Holy Deen palette: black #111111, white, background #F7F8FA, gold accent #D4AF37, border #E5E7EB.
+ * Halal Shodai palette: green #1B6B35, white, background #F7F8FA, gold accent #E0A526, border #E5E7EB.
  */
 
 .page {
@@ -11,16 +11,16 @@
 }
 
 .main {
-  --sc-black: #0B1B4F;
-  --sc-black-hover: #071233;
-  --sc-gold: #C59B27;
+  --sc-black: #1B6B35;
+  --sc-black-hover: #14552A;
+  --sc-gold: #E0A526;
   --sc-border: #e5e7eb;
   --sc-muted: #6b7280;
   --sc-text: #1f2937;
   --sc-danger: #dc2626;
-  --sc-gold-soft: #FAF4E6;
-  --sc-gold-deep: #8A6D12;
-  --sc-warm-border: #E5D2A0;
+  --sc-gold-soft: #FDF6E3;
+  --sc-gold-deep: #9A6E10;
+  --sc-warm-border: #F3DDA2;
 
   flex: 1;
   padding: 32px 0 40px;
@@ -887,9 +887,9 @@
 .statusPill {
   display: inline-block;
   border-radius: 999px;
-  border: 1px solid rgba(212, 175, 55, 0.5);
-  background: rgba(212, 175, 55, 0.1);
-  color: #8a6d12;
+  border: 1px solid rgba(224, 165, 38, 0.5);
+  background: rgba(224, 165, 38, 0.1);
+  color: #9A6E10;
   padding: 3px 12px;
   font-size: 13px;
   font-weight: 600;
@@ -957,8 +957,8 @@
   height: 56px;
   margin: 0 auto 16px;
   border-radius: 50%;
-  background: rgba(212, 175, 55, 0.12);
-  color: #8a6d12;
+  background: rgba(224, 165, 38, 0.12);
+  color: #9A6E10;
   display: flex;
   align-items: center;
   justify-content: center;

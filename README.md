@@ -14,7 +14,7 @@ pnpm dev
 bun dev
 ```
 
-Open [https://api.holydeen.com](https://api.holydeen.com) with your browser to see the result.
+Open [http://api.halalshodai.xyz](http://api.halalshodai.xyz) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 

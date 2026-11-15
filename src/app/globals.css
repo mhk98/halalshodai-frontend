@@ -1,14 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --primary: #0B1B4F;
-  --primary-hover: #071233;
-  --primary-dark: #050E29;
-  --primary-light: #EEF2F9;
-  --secondary: #C59B27;
-  --secondary-hover: #A87F18;
-  --gold: #C59B27;
-  --gold-soft: #FAF4E6;
+  --primary: #1B6B35;
+  --primary-hover: #14552A;
+  --primary-dark: #0E3F1F;
+  --primary-light: #EAF4EC;
+  --secondary: #E0A526;
+  --secondary-hover: #C48D17;
+  --gold: #E0A526;
+  --gold-soft: #FDF6E3;
+  --cream: #FBF8F1;
 }
 
 * {
@@ -25,7 +26,7 @@
 }
 
 body {
-  background-color: #F5F5F5;
+  background-color: #FBF8F1;
   font-family: "Lato", Arial, Helvetica, sans-serif;
   font-size: 15px;
   color: #333;
@@ -375,9 +376,9 @@ body {
 }
 
 .track-order-input:focus {
-  border-color: #0B1B4F;
+  border-color: #1B6B35;
   background: #fff;
-  box-shadow: 0 0 0 4px rgba(11, 27, 79, 0.15);
+  box-shadow: 0 0 0 4px rgba(27, 107, 53, 0.15);
 }
 
 .track-order-button {
@@ -651,7 +652,7 @@ body {
   margin: 0 0 16px 22px;
 }
 .dynamic-page-content a {
-  color: #0B1B4F;
+  color: #1B6B35;
   text-decoration: underline;
 }
 .dynamic-page-content .policy-intro {
@@ -680,7 +681,7 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 6px;
-  background: #eef2ff;
+  background: #EAF4EC;
   font-size: 15px;
 }
 .dynamic-page-content .policy-step {

@@ -107,7 +107,7 @@ function CheckoutContent({ header, footer }: SiteChromeSlots) {
       id: "cod" as const,
       label: "Cash on Delivery",
       number: null,
-      bg: "#0B1B4F",
+      bg: "#1B6B35",
     },
     {
       id: "bkash" as const,
@@ -450,7 +450,7 @@ function CheckoutContent({ header, footer }: SiteChromeSlots) {
               }}
             >
               {/* Brand header */}
-              <div style={{ background: "#0B1B4F", padding: "18px 28px" }}>
+              <div style={{ background: "#1B6B35", padding: "18px 28px" }}>
                 <p
                   style={{
                     color: "#fff",
@@ -753,7 +753,7 @@ function CheckoutContent({ header, footer }: SiteChromeSlots) {
                       style={{
                         margin: "6px 0 0",
                         fontSize: 13,
-                        color: "#0B1B4F",
+                        color: "#1B6B35",
                         fontWeight: 500,
                       }}
                     >
@@ -872,7 +872,7 @@ function CheckoutContent({ header, footer }: SiteChromeSlots) {
                   onClick={handleConfirm}
                   disabled={loading}
                   style={{
-                    background: loading ? "#aaa" : "#0B1B4F",
+                    background: loading ? "#aaa" : "#1B6B35",
                     color: "#fff",
                     border: "none",
                     borderRadius: 8,
@@ -1250,7 +1250,7 @@ function CheckoutContent({ header, footer }: SiteChromeSlots) {
                     onClick={handleApplyCoupon}
                     disabled={couponLoading}
                     style={{
-                      background: couponLoading ? "#9ca3af" : "#C59B27",
+                      background: couponLoading ? "#9ca3af" : "#E0A526",
                       color: "#fff",
                       border: "none",
                       borderRadius: 8,

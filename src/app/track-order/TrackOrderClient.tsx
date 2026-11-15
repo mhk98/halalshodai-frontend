@@ -13,8 +13,8 @@ import {
   type OrderStatusOption,
 } from "@/services/orderStatusService";
 
-const PRIMARY = "#0B1B4F";
-const SECONDARY = "#C59B27";
+const PRIMARY = "#1B6B35";
+const SECONDARY = "#E0A526";
 
 interface TrackedOrderItem {
   name: string;
@@ -214,7 +214,7 @@ export default function TrackOrderPage({ header, footer }: SiteChromeSlots) {
     }
     const normalized = value.replace(/^#/, "").toUpperCase();
     const isPhone = /^01\d{9}$/.test(normalized);
-    // HD- is current; TJ-/WZ- are older invoice prefixes the backend still resolves.
+    // HS- is current; TJ-/WZ- are older invoice prefixes the backend still resolves.
     const isInvoice = /^(HD|TJ|WZ)-[A-Z0-9-]+$/.test(normalized);
     if (!isPhone && !isInvoice) {
       setError("সঠিক ফোন নম্বর অথবা ইনভয়েস আইডি দিন");
@@ -601,7 +601,7 @@ export default function TrackOrderPage({ header, footer }: SiteChromeSlots) {
                     value={trackingValue}
                     onChange={(e) => setTrackingValue(e.target.value)}
                     onKeyDown={(e) => e.key === "Enter" && track()}
-                    placeholder="01700000000 অথবা HD-0001"
+                    placeholder="01700000000 অথবা HS-0001"
                     className="track-order-input"
                   />
                 </div>

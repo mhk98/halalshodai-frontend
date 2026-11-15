@@ -1,28 +1,28 @@
 /**
- * Holy Deen Brand Color Palette
+ * Halal Shodai Brand Color Palette
  * Derived directly from the official logo:
- * - Primary: Deep Royal Navy Blue (#0B1B4F) from "HOLY DEEN"
- * - Secondary / Gold: Warm Islamic Royal Gold (#C59B27) from Arabic calligraphy & "ATTAR & LIFESTYLE"
+ * - Primary: Deep Islamic Green (#1B6B35) from the shopping bag & "হালাল সদাই" wordmark
+ * - Secondary / Gold: Crescent Gold (#E0A526) from the crescent, star & "HALAL SHODAI" dashes
  */
 
 export const THEME = {
-  // Brand Primary (Deep Royal Navy)
-  primary: "#0B1B4F",
-  primaryHover: "#071233",
-  primaryDark: "#050E29",
-  primaryLight: "#EEF2F9",
-  primaryBorder: "#C8D5E8",
+  // Brand Primary (Deep Islamic Green)
+  primary: "#1B6B35",
+  primaryHover: "#14552A",
+  primaryDark: "#0E3F1F",
+  primaryLight: "#EAF4EC",
+  primaryBorder: "#BEDCC6",
 
-  // Brand Secondary (Royal Warm Gold)
-  gold: "#C59B27",
-  goldHover: "#A87F18",
-  goldDark: "#8A6D12",
-  goldLight: "#FAF4E6",
-  goldBorder: "#E5D2A0",
+  // Brand Secondary (Crescent Gold)
+  gold: "#E0A526",
+  goldHover: "#C48D17",
+  goldDark: "#9A6E10",
+  goldLight: "#FDF6E3",
+  goldBorder: "#F3DDA2",
 
   // Common UI aliases
-  secondary: "#C59B27",
-  secondaryHover: "#A87F18",
+  secondary: "#E0A526",
+  secondaryHover: "#C48D17",
 
   // Alerts & Accents
   accentRed: "#D7262E",
@@ -32,7 +32,7 @@ export const THEME = {
   // Neutrals
   dark: "#111827",
   muted: "#6B7280",
-  lightBg: "#F7F8FA",
+  lightBg: "#FBF8F1",
   border: "#E5E7EB",
 } as const;
 

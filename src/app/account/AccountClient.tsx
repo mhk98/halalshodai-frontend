@@ -11,8 +11,8 @@ import { ApiResponse } from "@/types/api";
 import { useCustomer } from "@/context/CustomerContext";
 import CustomerAvatar from "@/components/CustomerAvatar";
 
-const PRIMARY = "#0B1B4F";
-const SECONDARY = "#C59B27";
+const PRIMARY = "#1B6B35";
+const SECONDARY = "#E0A526";
 
 interface OrderItem { name: string; image?: string; qty: number; price: number; variant?: string; size?: string; color?: string; }
 interface Order {

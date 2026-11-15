@@ -7,7 +7,7 @@
 // import { useCart } from "@/context/CartContext";
 
 // const PRIMARY   = "#111111";
-// const SECONDARY = "#C59B27";
+// const SECONDARY = "#E0A526";
 // const fmt = (v: number) => v.toLocaleString("en-US");
 
 // interface Props {
@@ -119,13 +119,13 @@
 //       <div className="product-info">
 
 //         <nav className="text-base text-gray-500 mb-5 flex items-center flex-wrap gap-1">
-//           <Link href="/" className="hover:text-[#0B1B4F] transition">Home</Link>
+//           <Link href="/" className="hover:text-[#1B6B35] transition">Home</Link>
 //           {product.category && (
 //             <>
 //               <span>/</span>
 //               <Link
 //                 href={`/?menu=${encodeURIComponent(product.category)}`}
-//                 className="hover:text-[#0B1B4F] transition capitalize"
+//                 className="hover:text-[#1B6B35] transition capitalize"
 //               >
 //                 {product.category}
 //               </Link>
@@ -136,7 +136,7 @@
 //               <span>/</span>
 //               <Link
 //                 href={`/?menu=${encodeURIComponent(product.category ?? "")}&sub=${encodeURIComponent(product.subCategory)}`}
-//                 className="hover:text-[#0B1B4F] transition capitalize"
+//                 className="hover:text-[#1B6B35] transition capitalize"
 //               >
 //                 {product.subCategory}
 //               </Link>
@@ -306,8 +306,8 @@ import {
   type ProductReview,
 } from "@/services/productService";
 
-const PRIMARY = "#0B1B4F";
-const SECONDARY = "#C59B27";
+const PRIMARY = "#1B6B35";
+const SECONDARY = "#E0A526";
 const ACCENT = "#D7262E";
 
 const fmt = (v: number) => v.toLocaleString("en-US");
@@ -470,7 +470,7 @@ export default function ProductDetailClient({
           style={{ marginBottom: "1rem" }}
           className="mb-4 flex flex-wrap items-center gap-1 text-base text-gray-500"
         >
-          <Link href="/" className="transition hover:text-[#0B1B4F]">
+          <Link href="/" className="transition hover:text-[#1B6B35]">
             Home
           </Link>
 
@@ -479,7 +479,7 @@ export default function ProductDetailClient({
               <span>/</span>
               <Link
                 href={`/?menu=${encodeURIComponent(product.category)}`}
-                className="capitalize transition hover:text-[#0B1B4F]"
+                className="capitalize transition hover:text-[#1B6B35]"
               >
                 {product.category}
               </Link>
@@ -493,7 +493,7 @@ export default function ProductDetailClient({
                 href={`/?menu=${encodeURIComponent(
                   product.category ?? "",
                 )}&sub=${encodeURIComponent(product.subCategory)}`}
-                className="capitalize transition hover:text-[#0B1B4F]"
+                className="capitalize transition hover:text-[#1B6B35]"
               >
                 {product.subCategory}
               </Link>

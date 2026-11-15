@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { useCustomer } from "@/context/CustomerContext";
 import CustomerAvatar from "@/components/CustomerAvatar";
 
-const SECONDARY = "#C59B27";
+const SECONDARY = "#E0A526";
 
 const MENU_LINKS = [
   {
@@ -55,7 +55,7 @@ export default function AccountMenu({ compact = false }: { compact?: boolean }) 
       <Link
         href="/login"
         aria-label="Login"
-        className="flex flex-col items-center gap-0.5 text-gray-600 hover:text-[#0B1B4F] transition-colors"
+        className="flex flex-col items-center gap-0.5 text-gray-600 hover:text-[#1B6B35] transition-colors"
       >
         <svg width={compact ? 22 : 24} height={compact ? 22 : 24} fill="none" stroke="currentColor" strokeWidth={1.8} viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" /><circle cx="12" cy="7" r="4" /></svg>
         <span style={{ fontSize: compact ? 10 : 11 }}>Login</span>
@@ -81,7 +81,7 @@ export default function AccountMenu({ compact = false }: { compact?: boolean }) 
         aria-haspopup="menu"
         aria-expanded={open}
         aria-label="Account menu"
-        className="flex flex-col items-center gap-0.5 text-gray-600 hover:text-[#0B1B4F] transition-colors"
+        className="flex flex-col items-center gap-0.5 text-gray-600 hover:text-[#1B6B35] transition-colors"
         style={{ background: "none", border: "none", cursor: "pointer", padding: 0 }}
       >
         <CustomerAvatar

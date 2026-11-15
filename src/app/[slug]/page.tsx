@@ -125,9 +125,9 @@ function buildProductOptions(
 
 export async function generateMetadata({ params }: PageProps) {
   const page = await fetchLandingPage(await readSlug(params));
-  if (!page) return { title: "Landing Page - Holy Deen" };
+  if (!page) return { title: "Landing Page - Halal Shodai" };
   return {
-    title: `${page.title} - Holy Deen`,
+    title: `${page.title} - Halal Shodai`,
     alternates: { canonical: landingPath(page) },
     description: stripHtml(
       page.shortDescription || page.description || page.subTitle || "",
@@ -215,7 +215,7 @@ export default async function LandingPage({ params }: PageProps) {
       <div className="landing-root">
         <TopStrip phone={phone} header={header} />
 
-        <section className="bg-[#FAF4E6] px-4 pb-14 pt-8 text-center">
+        <section className="bg-[#FDF6E3] px-4 pb-14 pt-8 text-center">
           <div className="mx-auto max-w-5xl">
             {header?.status !== false && header?.logoUrl ? (
               <img
@@ -319,7 +319,7 @@ export default async function LandingPage({ params }: PageProps) {
                 style={{ color: colors.headingColor }}
               >
                 {reviewOfferPriceLabel}{" "}
-                <span className="text-[#C59B27]">
+                <span className="text-[#E0A526]">
                   {formatMoney(reviewOfferPrice)}/- টাকা
                 </span>
               </p>
@@ -459,13 +459,13 @@ export default async function LandingPage({ params }: PageProps) {
 }
 
 const DEFAULT_COLORS = {
-  titleColor: "#0B1B4F",
-  subTitleColor: "#C59B27",
-  headingColor: "#0B1B4F",
+  titleColor: "#1B6B35",
+  subTitleColor: "#E0A526",
+  headingColor: "#1B6B35",
   fontColor: "#333333",
-  buttonColor: "#C59B27",
+  buttonColor: "#E0A526",
   buttonTextColor: "#ffffff",
-  sectionBgColor: "#FAF4E6",
+  sectionBgColor: "#FDF6E3",
 };
 
 function getVideoEmbedUrl(value?: string | null) {
@@ -519,11 +519,11 @@ function TopStrip({
   if (header?.status === false) return null;
   const supportPhone = header?.supportPhone || phone;
   const socialLinks = (header?.socialLinks || []).filter((item) => item.url);
-  const accent = header?.accentColor || "#C59B27";
+  const accent = header?.accentColor || "#E0A526";
   return (
     <div
       style={{
-        backgroundColor: header?.backgroundColor || "#071233",
+        backgroundColor: header?.backgroundColor || "#14552A",
         color: header?.textColor || "#ffffff",
       }}
     >

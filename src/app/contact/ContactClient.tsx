@@ -184,7 +184,7 @@ export default function ContactPage({ header, footer, initialSettings }: Props) 
         value: phone,
         href: `tel:${phone}`,
         bg: "#eff6ff",
-        color: "#0B1B4F",
+        color: "#1B6B35",
         icon: "phone" as const,
       },
       hotline && {
@@ -202,7 +202,7 @@ export default function ContactPage({ header, footer, initialSettings }: Props) 
         value: email,
         href: `mailto:${email}`,
         bg: "#fef2f2",
-        color: "#0B1B4F",
+        color: "#1B6B35",
         icon: "mail" as const,
       },
       hotMail && {
@@ -336,7 +336,7 @@ export default function ContactPage({ header, footer, initialSettings }: Props) 
                   minHeight: 42,
                   padding: "0 18px",
                   borderRadius: 8,
-                  background: "#0B1B4F",
+                  background: "#1B6B35",
                   color: "#fff",
                   fontSize: 14,
                   fontWeight: 700,

@@ -1,7 +1,7 @@
 "use client";
 import type { VariantSelection } from "@/lib/useVariantSelection";
 
-const PRIMARY = "#0B1B4F";
+const PRIMARY = "#1B6B35";
 
 export default function VariantSelector({ selection }: { selection: VariantSelection }) {
   const { optionGroups, selected, select, valueState } = selection;
@@ -33,7 +33,7 @@ export default function VariantSelector({ selection }: { selection: VariantSelec
                     cursor: "pointer",
                     borderWidth: active ? 2 : 1,
                     borderColor: active ? PRIMARY : "#d1d5db",
-                    backgroundColor: active ? "#FAF4E6" : "#fff",
+                    backgroundColor: active ? "#FDF6E3" : "#fff",
                     color: active ? PRIMARY : "#111",
                     opacity: state === "available" ? 1 : 0.45,
                     textDecoration: state === "soldout" ? "line-through" : undefined,

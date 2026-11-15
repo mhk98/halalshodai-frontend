@@ -21,9 +21,9 @@ const normalizePhoneNumber = (value: string) =>
     .replace(/[০-৯]/g, (digit) => String("০১২৩৪৫৬৭৮৯".indexOf(digit)))
     .replace(/\D/g, "");
 
-const PRIMARY = "#0B1B4F";
-const GOLD = "#C59B27";
-const SOFT_GOLD = "#FAF4E6";
+const PRIMARY = "#1B6B35";
+const GOLD = "#E0A526";
+const SOFT_GOLD = "#FDF6E3";
 const TEXT = "#111827";
 const MUTED = "#4b5563";
 
@@ -174,7 +174,7 @@ function ReConfirmContent({ header, footer }: SiteChromeSlots) {
                   fontWeight: 600,
                 }}
               >
-                Holy Deen এর সাথে থাকার জন্য জাযাকাল্লাহ খাইরান
+                Halal Shodai এর সাথে থাকার জন্য জাযাকাল্লাহ খাইরান
               </p>
               <div
                 style={{
@@ -269,7 +269,7 @@ function ReConfirmContent({ header, footer }: SiteChromeSlots) {
                   fontWeight: 600,
                 }}
               >
-                Holy Deen এর সাথে থাকার জন্য জাযাকাল্লাহ খাইরান
+                Halal Shodai এর সাথে থাকার জন্য জাযাকাল্লাহ খাইরান
               </p>
 
               <div

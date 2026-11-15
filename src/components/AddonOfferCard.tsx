@@ -97,18 +97,18 @@ export default function AddonOfferCard({
               missing
                 ? "border-red-500 bg-red-50"
                 : checked
-                  ? "border-[#C59B27] bg-[#FAF4E6]/70"
+                  ? "border-[#E0A526] bg-[#FDF6E3]/70"
                   : "border-slate-300 bg-white"
             }`}
           >
-            <p className="text-xs font-black uppercase tracking-wide text-[#A87F18]">{texts.title}</p>
+            <p className="text-xs font-black uppercase tracking-wide text-[#C48D17]">{texts.title}</p>
 
             <label className="mt-2 flex cursor-pointer items-center gap-2 text-sm font-black text-slate-800">
               <input
                 type="checkbox"
                 checked={checked}
                 onChange={toggle}
-                className="h-5 w-5 shrink-0 accent-[#0B1B4F]"
+                className="h-5 w-5 shrink-0 accent-[#1B6B35]"
               />
               {fillProduct(texts.checkboxText, product.name)}
             </label>
@@ -126,7 +126,7 @@ export default function AddonOfferCard({
                   {regular > price ? (
                     <span className="text-gray-400 line-through">{formatMoney(regular)}৳</span>
                   ) : null}
-                  <span className="rounded bg-[#0B1B4F] px-2 py-0.5 text-xs font-black text-white">
+                  <span className="rounded bg-[#1B6B35] px-2 py-0.5 text-xs font-black text-white">
                     {addonPriceText(price)}
                   </span>
                 </p>
@@ -157,8 +157,8 @@ export default function AddonOfferCard({
                             onClick={() => onSelect(slot.key, active ? undefined : variant.id)}
                             className={`min-w-11 rounded border px-3 py-1.5 text-sm font-bold transition disabled:cursor-not-allowed disabled:opacity-40 ${
                               active
-                                ? "border-[#0B1B4F] bg-[#0B1B4F] text-white"
-                                : "border-slate-300 bg-white text-slate-700 hover:border-[#0B1B4F]"
+                                ? "border-[#1B6B35] bg-[#1B6B35] text-white"
+                                : "border-slate-300 bg-white text-slate-700 hover:border-[#1B6B35]"
                             }`}
                           >
                             {variantName(variant.options, variant.label)}

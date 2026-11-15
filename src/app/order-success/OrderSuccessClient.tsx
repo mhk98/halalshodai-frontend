@@ -5,7 +5,7 @@ import { Suspense, useEffect, useState } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 
-const SECONDARY = "#0B1B4F";
+const SECONDARY = "#1B6B35";
 
 function getStoredInvoiceId(): string {
   if (typeof window === "undefined") return "";

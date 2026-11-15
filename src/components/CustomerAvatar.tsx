@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 
-const PRIMARY = "#0B1B4F";
+const PRIMARY = "#1B6B35";
 
 interface AvatarCustomer {
   name?: string;

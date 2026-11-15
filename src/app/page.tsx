@@ -128,7 +128,7 @@ export default async function Home({
           <div style={{ width: "90%", margin: "16px auto 0" }}>
             <Link
               href="/"
-              style={{ fontSize: 13, color: "#0B1B4F", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 4 }}
+              style={{ fontSize: 13, color: "#1B6B35", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 4 }}
             >
               ← সব পণ্য দেখুন
             </Link>

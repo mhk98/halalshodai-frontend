@@ -8,8 +8,8 @@ import { apiFetch } from "@/lib/api";
 import { ApiResponse } from "@/types/api";
 import { useCustomer, type CustomerInfo } from "@/context/CustomerContext";
 
-const PRIMARY = "#0B1B4F";
-const SECONDARY = "#C59B27";
+const PRIMARY = "#1B6B35";
+const SECONDARY = "#E0A526";
 
 type Mode = "login" | "register";
 
