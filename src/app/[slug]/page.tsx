@@ -198,6 +198,14 @@ export default async function LandingPage({ params }: PageProps) {
   const reviewRegularPrice =
     toNumber(page.originalPrice, 0) ||
     toNumber(productOptions[0]?.originalPrice, 0);
+  // With several checkout products and no page-level price, list each product's price
+  // instead of showing only the first one.
+  const reviewPriceList =
+    productOptions.length > 1 &&
+    !toNumber(page.price, 0) &&
+    !toNumber(page.originalPrice, 0)
+      ? productOptions
+      : [];
   const hasReviewSection = Boolean(
     reviewHeading ||
     reviewSubHeading ||
@@ -305,7 +313,36 @@ export default async function LandingPage({ params }: PageProps) {
                 {reviewSubHeading}
               </p>
             ) : null}
-            {reviewRegularPriceLabel && reviewRegularPrice > 0 ? (
+            {reviewPriceList.length ? (
+              <div className="mx-auto mt-10 grid max-w-3xl gap-3 sm:grid-cols-2">
+                {reviewPriceList.map((option) => (
+                  <div
+                    key={option.id}
+                    className="flex items-center justify-between gap-3 rounded-xl bg-white px-4 py-3 text-left shadow-sm"
+                  >
+                    <span
+                      className="text-lg font-black"
+                      style={{ color: colors.headingColor }}
+                    >
+                      {option.name}
+                    </span>
+                    <span className="shrink-0 text-right">
+                      {option.originalPrice > option.price ? (
+                        <span className="mr-2 text-sm font-bold text-slate-500 line-through">
+                          {formatMoney(option.originalPrice)}/-
+                        </span>
+                      ) : null}
+                      <span className="text-xl font-black text-[#E0A526]">
+                        {formatMoney(option.price)}/- টাকা
+                      </span>
+                    </span>
+                  </div>
+                ))}
+              </div>
+            ) : null}
+            {!reviewPriceList.length &&
+            reviewRegularPriceLabel &&
+            reviewRegularPrice > 0 ? (
               <p className="mt-12 text-2xl font-black text-slate-600">
                 {reviewRegularPriceLabel}{" "}
                 <span className="line-through">
@@ -313,7 +350,9 @@ export default async function LandingPage({ params }: PageProps) {
                 </span>
               </p>
             ) : null}
-            {reviewOfferPriceLabel && reviewOfferPrice > 0 ? (
+            {!reviewPriceList.length &&
+            reviewOfferPriceLabel &&
+            reviewOfferPrice > 0 ? (
               <p
                 className="mt-5 text-3xl font-black md:text-5xl"
                 style={{ color: colors.headingColor }}
