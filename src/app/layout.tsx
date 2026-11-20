@@ -15,8 +15,8 @@ const lato = Lato({
 });
 
 const baseMetadata: Metadata = {
-  title: "Halal Shodai - Halal Shodai is the best level ecommerce in Bangladesh",
-  description: "Best level ecommerce in Bangladesh",
+  title: "হালাল সদাই 🌙 বিশ্বস্ত হালাল পণ্য, এক জায়গায়",
+  description: "হালাল সদাই 🌙 বিশ্বস্ত হালাল পণ্য, এক জায়গায়",
   icons: {
     icon: [{ url: "/icon.png", type: "image/png" }],
     apple: { url: "/apple-icon.png", sizes: "256x256", type: "image/png" },
