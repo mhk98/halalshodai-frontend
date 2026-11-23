@@ -1,25 +1,39 @@
 {
-  "name": "Halal Shodai",
-  "version": "0.1.0",
+  "name": "your-brand-frontend",
+  "version": "1.0.0",
   "private": true,
+  "description": "[YOUR_BRAND] storefront (Next.js App Router + TypeScript + Tailwind)",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build --webpack",
-    "start": "next start"
+    "dev": "next dev -p 3000",
+    "build": "next build",
+    "start": "next start -p 3000",
+    "typecheck": "tsc --noEmit",
+    "e2e": "node e2e/store.e2e.mjs"
   },
   "dependencies": {
-    "next": "16.2.6",
-    "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "@hookform/resolvers": "^3.9.1",
+    "@tanstack/react-query": "^5.62.7",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.468.0",
+    "next": "14.2.15",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-hook-form": "^7.54.1",
+    "react-hot-toast": "^2.4.1",
+    "server-only": "^0.0.1",
+    "sharp": "^0.33.5",
+    "zod": "^3.23.8",
+    "zustand": "^5.0.2"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "16.2.6",
-    "tailwindcss": "^4",
-    "typescript": "^5"
+    "@tailwindcss/typography": "^0.5.15",
+    "@types/node": "^20.17.10",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "autoprefixer": "^10.4.20",
+    "playwright-core": "^1.49.1",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.16",
+    "typescript": "~5.6.3"
   }
 }
