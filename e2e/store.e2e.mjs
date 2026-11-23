@@ -1,11 +1,11 @@
 // Storefront browser E2E — see README "E2E tests".
 // Needs: API on a freshly seeded DB (npm run db:fresh, PAYMENT_MODE=mock, SMS_PROVIDER=log) and this app running.
-// Env: STORE_URL (default http://localhost:3000), API_URL, API_LOG (API console log file, for the OTP step), PW_CHANNEL.
+// Env: STORE_URL (default https://halalshodai.xyz), API_URL, API_LOG (API console log file, for the OTP step), PW_CHANNEL.
 import { chromium } from 'playwright-core';
 import fs from 'node:fs';
 import path from 'node:path';
 
-const BASE = (process.env.STORE_URL || 'http://localhost:3000').replace(/\/$/, '');
+const BASE = (process.env.STORE_URL || 'https://halalshodai.xyz').replace(/\/$/, '');
 const API = (process.env.API_URL || 'https://api.halalshodai.xyz/api/v1').replace(/\/$/, '');
 const OUT = path.resolve('e2e/screenshots');
 fs.mkdirSync(OUT, { recursive: true });

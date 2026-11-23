@@ -24,5 +24,5 @@ export function stripLang(pathname: string) {
 /** Pick the localized name: Bangla name when browsing in Bangla and available. */
 export const ln = (lang: Lang, en: string, bn?: string | null) => (lang === 'bn' && bn ? bn : en);
 
-export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000').replace(/\/$/, '');
+export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || 'https://halalshodai.xyz').replace(/\/$/, '');
 export const SITE_NAME = process.env.NEXT_PUBLIC_SITE_NAME || '[YOUR_BRAND]';
