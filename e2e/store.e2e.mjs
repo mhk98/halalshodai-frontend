@@ -6,7 +6,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const BASE = (process.env.STORE_URL || 'http://localhost:3000').replace(/\/$/, '');
-const API = (process.env.API_URL || 'http://localhost:5000/api/v1').replace(/\/$/, '');
+const API = (process.env.API_URL || 'https://api.halalshodai.xyz/api/v1').replace(/\/$/, '');
 const OUT = path.resolve('e2e/screenshots');
 fs.mkdirSync(OUT, { recursive: true });
 

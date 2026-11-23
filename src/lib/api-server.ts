@@ -5,7 +5,7 @@ import type { PaginationMeta } from '@/types';
  * Server-side API access for Server Components (ISR-cached via fetch's `next.revalidate`).
  * Uses API_INTERNAL_URL when set (e.g. Docker network), else NEXT_PUBLIC_API_URL.
  */
-const API = (process.env.API_INTERNAL_URL || process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api/v1').replace(/\/$/, '');
+const API = (process.env.API_INTERNAL_URL || process.env.NEXT_PUBLIC_API_URL || 'https://api.halalshodai.xyz/api/v1').replace(/\/$/, '');
 
 interface Opts {
   revalidate?: number | false;

@@ -6,7 +6,7 @@ import { useAuthStore } from '@/store/auth';
  * Browser API client: sends the access token, the guest cart session id and the
  * refresh cookie (credentials: include). Refreshes the access token once on 401.
  */
-export const API_URL = (process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api/v1').replace(/\/$/, '');
+export const API_URL = (process.env.NEXT_PUBLIC_API_URL || 'https://api.halalshodai.xyz/api/v1').replace(/\/$/, '');
 const SESSION_KEY = 'cart_session';
 
 export class ApiError extends Error {

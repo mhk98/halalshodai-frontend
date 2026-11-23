@@ -1,8 +1,8 @@
 /**
  * Image hosts allowed for next/image come from NEXT_IMAGE_ORIGINS (comma-separated origins),
- * e.g. "https://placehold.co,http://localhost:5000,https://cdn.example.com".
+ * e.g. "https://placehold.co,https://api.halalshodai.xyz,https://cdn.example.com".
  */
-const origins = (process.env.NEXT_IMAGE_ORIGINS || 'https://placehold.co,http://localhost:5000,https://res.cloudinary.com')
+const origins = (process.env.NEXT_IMAGE_ORIGINS || 'https://placehold.co,https://api.halalshodai.xyz,https://res.cloudinary.com')
   .split(',')
   .map((o) => o.trim())
   .filter(Boolean);
