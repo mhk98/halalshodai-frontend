@@ -29,9 +29,9 @@ export default function CardActions({ product, compact = false, className }: { p
   const pickSize = product.variants.length > 1;
   const url = href(`/products/${product.slug}`);
 
-  const base = clsx('inline-flex h-10 items-center justify-center gap-1.5 rounded-md text-sm font-semibold transition', !compact && 'min-w-0 flex-1');
-  const cartStyle = clsx(base, 'border border-gold-500 bg-white px-2.5 text-forest-800 hover:bg-gold-500/10', compact ? 'lg:px-4' : 'flex-none md:flex-1');
-  const buyStyle = clsx(base, 'bg-gold-500 px-3 text-gray-900 shadow-sm hover:bg-gold-400 active:bg-gold-600', compact && 'px-4');
+  const base = clsx('inline-flex h-10 items-center justify-center gap-1.5 rounded-md text-[13px] font-semibold transition sm:text-sm', !compact && 'min-w-0 flex-1');
+  const cartStyle = clsx(base, 'border border-gold-500 bg-white px-2.5 text-forest-800 hover:bg-gold-500/10', compact ? 'lg:px-4' : 'w-10 flex-none px-0 md:w-auto md:flex-1 md:px-2.5');
+  const buyStyle = clsx(base, 'bg-gold-500 px-2 text-gray-900 sm:px-3 shadow-sm hover:bg-gold-400 active:bg-gold-600', compact && 'px-4');
 
   if (!product.inStock) {
     return (

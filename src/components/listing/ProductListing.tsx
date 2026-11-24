@@ -6,7 +6,7 @@ import { getT } from '@/lib/i18n';
 import { lp, ln } from '@/lib/routes';
 import { num } from '@/lib/format';
 import { ProductGrid } from '@/components/product/ProductCard';
-import Filters, { SortSelect } from './Filters';
+import Filters, { MobileFilters, SortSelect } from './Filters';
 import Pagination from './Pagination';
 import type { Brand, Category, Lang, PaginationMeta, ProductCard } from '@/types';
 
@@ -35,8 +35,8 @@ export default async function ProductListing({ lang, searchParams, category, tit
   const children = category?.children ?? [];
 
   return (
-    <div className="container py-6">
-      <div className="mb-5 flex flex-wrap items-end justify-between gap-3">
+    <div className="container py-4 sm:py-6">
+      <div className="mb-4 flex flex-wrap sm:mb-5 items-end justify-between gap-3">
         <div>
           <h1 className="text-2xl font-bold text-gray-900 sm:text-3xl">{title}</h1>
           {meta && <p className="mt-1 text-sm text-gray-500">{t('listing.count', { n: num(meta.total, lang) })}</p>}
@@ -58,7 +58,10 @@ export default async function ProductListing({ lang, searchParams, category, tit
           <Filters brands={brands} />
         </Suspense>
         <div className="min-w-0 flex-1">
-          <div className="mb-4 flex items-center justify-between gap-2 lg:justify-end">
+          <div className="mb-4 grid grid-cols-2 gap-2 lg:flex lg:justify-end">
+            <Suspense>
+              <MobileFilters brands={brands} />
+            </Suspense>
             <Suspense>
               <SortSelect />
             </Suspense>

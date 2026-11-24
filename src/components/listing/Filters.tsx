@@ -31,12 +31,12 @@ export function SortSelect() {
   const sp = useSearchParams();
   const update = useUpdateParams();
   return (
-    <label className="flex items-center gap-2 text-sm">
+    <label className="flex w-full items-center gap-2 text-sm lg:w-auto">
       <span className="hidden text-gray-500 sm:inline">{t('listing.sortBy')}</span>
       <select
         value={sp?.get('sort') || 'newest'}
         onChange={(e) => update({ sort: e.target.value === 'newest' ? null : e.target.value })}
-        className="rounded-lg border border-gray-300 bg-white py-2 pl-3 pr-8 text-sm focus:border-brand-500 focus:outline-none"
+        className="h-10 w-full min-w-0 rounded-lg border border-gray-300 bg-white pl-3 pr-8 text-sm focus:border-brand-500 focus:outline-none lg:w-auto"
       >
         {SORTS.map((s) => <option key={s} value={s}>{t(`sort.${s}`)}</option>)}
       </select>
@@ -140,29 +140,57 @@ function FilterBody({ brands, onDone }: { brands: Brand[]; onDone?: () => void }
   );
 }
 
-/** Sidebar on desktop, bottom sheet on mobile. */
+/** Desktop sidebar (lg and up). */
 export default function Filters({ brands }: { brands: Brand[] }) {
   const { t } = useApp();
+  return (
+    <aside className="hidden w-60 shrink-0 lg:block">
+      <div className="sticky top-36 rounded-xl bg-white p-5 shadow-card">
+        <p className="mb-4 flex items-center gap-2 font-semibold"><SlidersHorizontal className="h-4 w-4" />{t('listing.filters')}</p>
+        <FilterBody brands={brands} />
+      </div>
+    </aside>
+  );
+}
+
+/** Mobile/tablet: a toolbar button that opens the filters as a bottom sheet. */
+export function MobileFilters({ brands }: { brands: Brand[] }) {
+  const { t } = useApp();
+  const sp = useSearchParams();
   const [open, setOpen] = useState(false);
+  const active =
+    (sp?.get('minPrice') || sp?.get('maxPrice') ? 1 : 0) +
+    (sp?.get('brand') || '').split(',').filter(Boolean).length +
+    (['inStock', 'onSale'] as const).filter((k) => sp?.get(k) === 'true').length;
+
+  useEffect(() => {
+    if (!open) return;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => { document.body.style.overflow = prev; };
+  }, [open]);
+
   return (
     <>
-      <aside className="hidden w-60 shrink-0 lg:block">
-        <div className="sticky top-36 rounded-xl bg-white p-5 shadow-card">
-          <p className="mb-4 flex items-center gap-2 font-semibold"><SlidersHorizontal className="h-4 w-4" />{t('listing.filters')}</p>
-          <FilterBody brands={brands} />
-        </div>
-      </aside>
-      <button type="button" onClick={() => setOpen(true)} className="flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm lg:hidden">
+      <button
+        type="button"
+        onClick={() => setOpen(true)}
+        className="flex h-10 w-full items-center justify-center gap-2 rounded-lg border border-gray-300 bg-white px-3 text-sm font-medium text-gray-700 active:bg-gray-50 lg:hidden"
+      >
         <SlidersHorizontal className="h-4 w-4" /> {t('listing.filters')}
+        {active > 0 && <span className="grid h-5 min-w-[1.25rem] place-items-center rounded-full bg-brand-600 px-1 text-[11px] font-semibold text-white">{active}</span>}
       </button>
-      <div className={clsx('fixed inset-0 z-50 lg:hidden', !open && 'hidden')}>
+      <div className={clsx('fixed inset-0 z-[60] lg:hidden', !open && 'hidden')} role="dialog" aria-modal="true">
         <div className="absolute inset-0 bg-black/40" onClick={() => setOpen(false)} />
-        <div className="absolute inset-x-0 bottom-0 max-h-[85vh] overflow-y-auto rounded-t-2xl bg-white p-5">
-          <div className="mb-4 flex items-center justify-between">
-            <p className="font-semibold">{t('listing.filters')}</p>
-            <button type="button" onClick={() => setOpen(false)} aria-label={t('common.close')}><X className="h-5 w-5" /></button>
+        <div className="absolute inset-x-0 bottom-0 flex max-h-[85vh] flex-col rounded-t-2xl bg-white">
+          <div className="mx-auto mt-2 h-1.5 w-10 rounded-full bg-gray-300" aria-hidden />
+          <div className="flex items-center justify-between border-b border-gray-100 px-5 py-3">
+            <p className="flex items-center gap-2 font-semibold"><SlidersHorizontal className="h-4 w-4" />{t('listing.filters')}</p>
+            <button type="button" onClick={() => setOpen(false)} aria-label={t('common.close')} className="-mr-2 rounded-full p-2 hover:bg-gray-100"><X className="h-5 w-5" /></button>
           </div>
-          <FilterBody brands={brands} onDone={() => setOpen(false)} />
+          <div className="overflow-y-auto px-5 pb-[calc(1.5rem+env(safe-area-inset-bottom))] pt-4">
+            <FilterBody brands={brands} onDone={() => setOpen(false)} />
+          </div>
         </div>
       </div>
     </>

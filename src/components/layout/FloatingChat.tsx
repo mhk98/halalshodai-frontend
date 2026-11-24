@@ -14,7 +14,7 @@ export default function FloatingChat() {
   if (!whatsapp && !messenger) return null;
 
   return (
-    <div className="fixed bottom-20 right-4 z-30 flex flex-col items-end gap-3 sm:bottom-6">
+    <div className="fixed bottom-[calc(4.75rem+env(safe-area-inset-bottom))] right-3 z-30 flex flex-col items-end gap-3 sm:bottom-6 sm:right-4">
       {open && (
         <>
           {messenger && (
@@ -32,11 +32,11 @@ export default function FloatingChat() {
       <button
         type="button"
         onClick={() => setOpen((o) => !o)}
-        className="flex h-14 w-14 items-center justify-center rounded-full bg-brand-600 text-white shadow-xl transition hover:bg-brand-700"
+        className="flex h-12 w-12 items-center justify-center rounded-full bg-brand-600 ring-4 ring-white/70 sm:h-14 sm:w-14 sm:ring-0 text-white shadow-xl transition hover:bg-brand-700"
         aria-label={t('chat.label')}
         aria-expanded={open}
       >
-        {open ? <X className="h-6 w-6" /> : <MessageCircle className="h-6 w-6" />}
+        {open ? <X className="h-6 w-6" /> : <MessageCircle className="h-5 w-5 sm:h-6 sm:w-6" />}
       </button>
     </div>
   );
